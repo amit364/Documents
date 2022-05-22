@@ -99,7 +99,7 @@ DOCKER creates its on virtualize network through which containers talk to each o
 * containers can talk to each other without any port
 * But outside network/machines can talk to these containers using port only
 
-
+![Image](Images/Capture.JPG)
 
 
 | COMMAND               | PURPOSE OF COMMAND         |
