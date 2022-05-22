@@ -58,3 +58,14 @@ Most of conatiner images have OS LAYER at the bottom and application layer at th
 1. Downloading images in layers is easy
 2. Most important benefit of using layers is time efficient. Suppose we already have one container runnig and we have to download the latest image of that container, then layers which are new only will be downloaded. Layers which are common in old and new version will not be downloaded.
 
+
+### INSTALLATION OF DOCKER
+
+* Download the docker package from docs.docker.com OR search google to install the docker
+* docker usually creates a group by default with named 'docker'
+* Provide the docker GID to the user with which you will do configuration for containers
+
+>DOCKER COMMANDS
+
+** docker version 			Version of docker
+** docker pull image			Pull image from docker hub.
