@@ -53,14 +53,26 @@ Cotainer Images are found in repositories. We have two types of repositories:
 ### Container Layers
 Container Images are consist of layers. These layers include multiple libraries which are require to run the service. 
 
-Most of conatiner images have OS LAYER at the bottom and application layer at the top most. 
+Stackable Unification File System ( Unionfs) is used to create Docker images. Unionfs is 
+
+Most of container images have OS LAYER at the bottom and application layer at the top most. 
 
 1. Downloading images in layers is easy
 2. Most important benefit of using layers is time efficient. Suppose we already have one container runnig and we have to download the latest image of that container, then layers which are new only will be downloaded. Layers which are common in old and new version will not be downloaded.
 
 ### <span style="color:Yellow">DOCKER ARCHITECTURE</span>
 
+![Architect](Images/Architect.JPG)
 
+Docker engine consists of several components as shown in figure. Client and Server run simultaneously on the same host. 
+
+Client communicates with the server using a REST API which enables the client to also communicate with a remote server instance. 
+
+##### Docker Client 
+Its a CLI application named as "docker". it provides us CLI to interact with a docker server. It uses REST API to send instructions to either a local or remote server.
+
+##### Docker Server
+Its a daemon - 'dockerd'. Again it uses instructions sent by docker REST API and can interact with other daemons. 
 
 ### <span style="color:Yellow">INSTALLATION OF DOCKER</span>
 
