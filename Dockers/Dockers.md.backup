@@ -59,7 +59,7 @@ Most of conatiner images have OS LAYER at the bottom and application layer at th
 2. Most important benefit of using layers is time efficient. Suppose we already have one container runnig and we have to download the latest image of that container, then layers which are new only will be downloaded. Layers which are common in old and new version will not be downloaded.
 
 
-### INSTALLATION OF DOCKER
+### <span style="color:Yellow">INSTALLATION OF DOCKER</span>
 
 * Download the docker package from docs.docker.com OR search google to install the docker
 * docker usually creates a group by default with named 'docker'
@@ -67,5 +67,39 @@ Most of conatiner images have OS LAYER at the bottom and application layer at th
 
 >DOCKER COMMANDS
 
-** docker version 			Version of docker
-** docker pull image			Pull image from docker hub.
+| COMMAND               | PURPOSE OF COMMAND         |
+|-----------------------| ---------------------------|
+| docker version		| print the current docker version|
+|docker images			| List all current images in current system|
+| docker pull <\image>  | pull image from docker hub |
+| docker run <\image>	| install the image 		  |
+| docker ps				| list running containers on system |
+| docker run -d <\image> | install the image in DETACH MODE |
+| docker ps -a 			| list all containers running and stopped |
+| docker run <\image.version> | download the package from docker hub and install the image | 
+| docker run -p6000:27001 <\image>| start the container and bind the container port to system port 6000 |
+| docker run -d -p6000:12433 --name <\docker_name> <\image> | to provide customize name to docker |
+| docker exec -it <\container> /bin/bash | take terminal console of container. here it stands for interactive terminal |
+| docker rmi <\image> | delete the image | 
+| docker stop <\container> | stop the container |
+| docker start <\container> | start the container |
+| docker network ls | list network names withing container | 
+| docker logs <\container> | check container logs | 
+| docker tag tag_name <\image> | tag the image |
+| docker push |  push the image to docker hub | 
+
+
+### <span style="color:Yellow">DOCKER NETWORK</span>
+
+DOCKER creates its on virtualize network through which containers talk to each other.
+
+* containers can talk to each other without any port
+* But outside network/machines can talk to these containers using port only
+
+![](../../../../Downloads/Capture.JPG)
+
+| command            | Purpose                        |
+|------------------- |                                |
+
+|--------------------|--------------------------------||docker network ls   | list existing container network names | 
+|
