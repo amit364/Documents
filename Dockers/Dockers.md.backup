@@ -58,6 +58,9 @@ Most of conatiner images have OS LAYER at the bottom and application layer at th
 1. Downloading images in layers is easy
 2. Most important benefit of using layers is time efficient. Suppose we already have one container runnig and we have to download the latest image of that container, then layers which are new only will be downloaded. Layers which are common in old and new version will not be downloaded.
 
+### <span style="color:Yellow">DOCKER ARCHITECTURE</span>
+
+
 
 ### <span style="color:Yellow">INSTALLATION OF DOCKER</span>
 
@@ -96,10 +99,11 @@ DOCKER creates its on virtualize network through which containers talk to each o
 * containers can talk to each other without any port
 * But outside network/machines can talk to these containers using port only
 
-![](../../../../Downloads/Capture.JPG)
 
-| command            | Purpose                        |
-|------------------- |                                |
 
-|--------------------|--------------------------------||docker network ls   | list existing container network names | 
-|
+| COMMAND               | PURPOSE OF COMMAND         |
+|-----------------------| ---------------------------|
+|docker network ls| list the existing container network|
+| docker network create <\network-name> | create the network |
+
+
